@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+.container_app{
+    display: flex;
+}
+.container_page{
+    width: 80vw;
+    overflow-y: scroll;
+}
+.container_page::-webkit-scrollbar{
+    width: 0;
+}
+
+/* NavBar */
+.container_nav{
+    background-color: #0a0a14;
+    min-height: 100vh;
+    color: white;
+    min-width: 20vw;
+}
+.container_nav nav,
+.container_nav header{
+    display: flex;
+    flex-direction: column;
+}
+.container_nav header {
+    align-items: center;
+    padding: 1em 0;
+}
+.container_nav header span{
+    letter-spacing: 1px;
+    font-size: 1.1em;
+}
+.container_nav nav{
+    width: 100%;
+}
+.container_nav nav .link_nav{
+    display: inline-block;
+    width: 90%;
+    margin: .5em auto;
+    padding: 1.5em;
+    text-decoration: none;
+    color:#f2f2f2;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    transition: all .3s ease-out;
+    outline: none;
+}
+.container_nav nav .link_nav.active,
+.container_nav nav .link_nav:hover{
+    background-color: rgba(20, 20, 204, 0.5);
+    border-radius: 5px;
+    border-bottom: 1px solid transparent;
+}
+.container_nav nav .link_nav span {
+    font-weight: 600;
+}
+.container_nav nav .link_nav .icon{
+    font-size: 1.7em;
+} 
+.container_nav header img {
+    animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+    0%{ transform: rotate(0); }
+    100%{ transform: rotate(360deg); }
+}
