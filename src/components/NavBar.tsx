@@ -20,8 +20,16 @@ export const NavBar = () => {
                 <span>React App</span>
             </header>
             <nav>
-                <Link to="other" className={`link_nav ${activeClass('other')}`} >
-                    <span>User</span>
+                <Link to="lazy1" className={`link_nav ${activeClass('other')}`} >
+                    <span>Lazy 01</span>
+                    <AiOutlineBulb className="icon" />
+                </Link>
+                <Link to="lazy2" className={`link_nav ${activeClass('other')}`} >
+                    <span>Lazy 02</span>
+                    <AiOutlineBulb className="icon" />
+                </Link>
+                <Link to="lazy3" className={`link_nav ${activeClass('other')}`} >
+                    <span>Lazy 03</span>
                     <AiOutlineBulb className="icon" />
                 </Link>
             </nav>
