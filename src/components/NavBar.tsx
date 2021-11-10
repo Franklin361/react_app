@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { AiOutlineBulb } from "react-icons/ai";
 
 import logo from "../assets/logo.svg";
+import { routes } from "../router/routes";
 
 export const NavBar = () => {
 
@@ -20,18 +21,14 @@ export const NavBar = () => {
                 <span>React App</span>
             </header>
             <nav>
-                <Link to="lazy1" className={`link_nav ${activeClass('other')}`} >
-                    <span>Lazy 01</span>
-                    <AiOutlineBulb className="icon" />
-                </Link>
-                <Link to="lazy2" className={`link_nav ${activeClass('other')}`} >
-                    <span>Lazy 02</span>
-                    <AiOutlineBulb className="icon" />
-                </Link>
-                <Link to="lazy3" className={`link_nav ${activeClass('other')}`} >
-                    <span>Lazy 03</span>
-                    <AiOutlineBulb className="icon" />
-                </Link>
+                {
+                    routes.map(({ name, path }) => (
+                        <Link to={path} className={`link_nav ${activeClass(path)}`} key={path}>
+                            <span>{name}</span>
+                            <AiOutlineBulb className="icon" />
+                        </Link>
+                    ))
+                }
             </nav>
         </aside>
     )

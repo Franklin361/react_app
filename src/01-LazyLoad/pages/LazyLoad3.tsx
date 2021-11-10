@@ -1,4 +1,3 @@
-import React from 'react'
 
 export const LazyLoad3 = () => {
     return (
@@ -7,3 +6,5 @@ export const LazyLoad3 = () => {
         </div>
     )
 }
+
+export default LazyLoad3;
