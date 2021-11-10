@@ -1,18 +1,11 @@
 
-import { Link, useLocation } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import { AiOutlineBulb } from "react-icons/ai";
 
 import logo from "../assets/logo.svg";
 import { routes } from "../router/routes";
 
 export const NavBar = () => {
-
-    const { pathname } = useLocation();
-
-    const activeClass = (path: string) => {
-        const pathWithoutSlash = pathname.split('/')[1];
-        if (path === pathWithoutSlash) return 'active';
-    };
 
     return (
         <aside className="container_nav">
@@ -23,10 +16,11 @@ export const NavBar = () => {
             <nav>
                 {
                     routes.map(({ name, path }) => (
-                        <Link to={path} className={`link_nav ${activeClass(path)}`} key={path}>
+                        // link_nav
+                        <NavLink to={path} end className={ ({ isActive }) => (isActive ? "link_nav active" :  "link_nav" ) } key={path}>
                             <span>{name}</span>
                             <AiOutlineBulb className="icon" />
-                        </Link>
+                        </NavLink>
                     ))
                 }
             </nav>

@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { Navigate, Route, Routes } from "react-router"
+import { Navigate, Route, Routes } from "react-router-dom"
 import { NavBar } from "../components/NavBar"
 
 import { PrestantaionPage } from "../pages/Presentation/PrestantaionPage"
@@ -28,7 +28,7 @@ export const AppRouter = () => {
                         />
                     ))
                 }
-                <Route path="*" element={<Navigate to="/" />} />
+                {/* <Route path="*" element={<Navigate to="/" />} /> */}
             </Routes>
         </div>
     )

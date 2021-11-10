@@ -2,6 +2,7 @@
 import React from 'react';
 
 import { lazy } from "react";
+import { NoLazyLoading } from '../01-LazyLoad/pages/NoLazyLoading';
 
 type JSXComponent = () => JSX.Element;
 
@@ -13,24 +14,17 @@ interface IRoute {
 }
 
 
-const LazyLoad1 = lazy(()=> import( /* webpackChunkName: "LazyLoad1" */ '../01-LazyLoad/pages/LazyLoad1'));
-const LazyLoad2 = lazy(()=> import( /* webpackChunkName: "LazyLoad2" */ '../01-LazyLoad/pages/LazyLoad2'));
-const LazyLoad3 = lazy(()=> import( /* webpackChunkName: "LazyLoad3" */ '../01-LazyLoad/pages/LazyLoad3'));
+const LazyLoadNested = lazy(()=> import( /* webpackChunkName: "LazyLayoutNested" */ '../01-LazyLoad/layout/LazyLayout'));
 
 export const routes: IRoute[]  = [
     {
-        path: 'lazy1',
-        component: LazyLoad1,
-        name: 'Lazy_Page_01'
+        path: 'lazyload/*',
+        component: LazyLoadNested,
+        name: 'Lazy Loading Nested'
     },
     {
-        path: 'lazy2',
-        component: LazyLoad2,
-        name: 'Lazy_Page_02'
+        path: 'no-lazy',
+        component: NoLazyLoading,
+        name: 'No Lazy'
     },
-    {
-        path: 'lazy3',
-        component: LazyLoad3,
-        name: 'Lazy_Page_03'
-    }
 ]
