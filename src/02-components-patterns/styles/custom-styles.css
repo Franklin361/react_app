@@ -4,6 +4,12 @@
 .text-white{
     color: #f2f2f2;
 }
+.custom_title_cart{
+    display: inline-block;
+    font-size: .9em;
+    text-align: center;
+    /* background-color: rebeccapurple; */
+}
 .custom-image{
     border-radius: 20px;
     padding: 10px;
@@ -13,6 +19,16 @@
     color: white;
     font-weight: bold;
 }
+
+.custom-btns_cart>div{
+    font-size: .9em;
+}
 .custom-btns > div{
     border-color: #f2f2f2;
+}
+
+.shopping-cart{
+    position: fixed;
+    right: 10px;
+    top: 0;
 }
