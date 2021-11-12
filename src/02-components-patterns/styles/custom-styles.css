@@ -32,3 +32,11 @@
     right: 10px;
     top: 0;
 }
+
+.disable_btn{
+    border-color: gray!important;
+    color: gray!important;
+    border-left-color: white!important;
+    cursor: not-allowed;
+    background-color: rgba(0, 0, 0, 0.1)!important;
+}
