@@ -20,8 +20,24 @@ export const NavBar = () => {
                 <span>React App</span>
             </header>
             <nav>
-                <Link to="other" className={`link_nav ${activeClass('other')}`} >
-                    <span>User</span>
+                <Link to="registro" className={`link_nav ${activeClass('other')}`} >
+                    <span>Registro</span>
+                    <AiOutlineBulb className="icon" />
+                </Link>
+                <Link to="formik-basic" className={`link_nav ${activeClass('formik-basic')}`} >
+                    <span>Formik Basico</span>
+                    <AiOutlineBulb className="icon" />
+                </Link>
+                <Link to="formik-yup" className={`link_nav ${activeClass('formik-yup')}`} >
+                    <span>Formik Yup</span>
+                    <AiOutlineBulb className="icon" />
+                </Link>
+                <Link to="formik-component" className={`link_nav ${activeClass('formik-component')}`} >
+                    <span>Formik Component</span>
+                    <AiOutlineBulb className="icon" />
+                </Link>
+                <Link to="formik-abstractation" className={`link_nav ${activeClass('formik-abstractation')}`} >
+                    <span>Formik Abstractation</span>
                     <AiOutlineBulb className="icon" />
                 </Link>
             </nav>
