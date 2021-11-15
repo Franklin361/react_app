@@ -1,0 +1,58 @@
+[
+    {
+        "type": "text",
+        "name":"nombre",
+        "placeholder":"Example",
+        "label":"Nombre Completo",
+        "value":"",
+        "validations": [
+            {
+                "type": "required"
+            },
+            {
+                "type": "minLength",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "type": "email",
+        "name":"correo",
+        "placeholder":"example@example.com",
+        "label":"Correo electronico",
+        "value":"",
+        "validations": [
+            {
+                "type": "required"
+            },
+            {
+                "type": "email"
+            }
+        ]
+    },
+    {
+        "type": "select",
+        "name":"job",
+        "label":"Puesto de trabajo: ",
+        "value":"",
+        "options":[
+            {
+                "id": 1,
+                "desc": "Full-Stack Developer"
+            },
+            {
+                "id": 2,
+                "desc": "CEO Manager"
+            },
+            {
+                "id": 3,
+                "desc": "Front-End Developer"
+            }
+        ],
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    }
+]

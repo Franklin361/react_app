@@ -40,6 +40,14 @@ export const NavBar = () => {
                     <span>Formik Abstractation</span>
                     <AiOutlineBulb className="icon" />
                 </Link>
+                <Link to="formik-register" className={`link_nav ${activeClass('formik-register')}`} >
+                    <span>Formik Register</span>
+                    <AiOutlineBulb className="icon" />
+                </Link>
+                <Link to="dynamic-form" className={`link_nav ${activeClass('dynamic-form')}`} >
+                    <span>Dynamic Form</span>
+                    <AiOutlineBulb className="icon" />
+                </Link>
             </nav>
         </aside>
     )

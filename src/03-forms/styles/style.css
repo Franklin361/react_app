@@ -19,7 +19,7 @@
     border-bottom: 2px solid black;
     width: 65%;
 }
-.form, .form_formik{
+.form, .form_formik, .form_formik_register{
     background-color: rgb(235, 235, 235);
     border-radius: 5px;
     box-shadow: 7px 3px 5px rgba(0, 0, 0, 0.144);
@@ -78,7 +78,7 @@
     color: rgb(117, 117, 117);
     cursor: not-allowed;
 }
-.form > input {
+.form > input{
     width: 48%;
     font-size: 1.3em;
     padding: .5em;
@@ -89,17 +89,20 @@
 }
 
 /* Formik */
-.form_formik{
+.form_formik, .form_formik_register{
     flex-direction: column;
     padding: 1em 2em;
     gap: 0em;
     width: 60%;
 }
 
-.form_formik > div{
+.form_formik > div, .form_formik_register > div{
     width: 100%;
     align-items: center;
     margin-bottom: .5em;
+}
+.form_formik_register > div {
+    margin: .7em 0;
 }
 .form_formik > div > label {
     display: inline-block;
@@ -109,7 +112,9 @@
     color: rgba(0, 0, 0, 0.678);
     margin-bottom: .5em;
 }
-.form_formik > div > input, .select_input {
+.form_formik > div > input, .select_input,
+.form_formik_register > div> input
+{
     width: 100%;
     font-size: 1em;
     padding: .5em;
@@ -117,6 +122,9 @@
     border-radius: 5px;
     outline: 2px solid rgba(0, 0, 0, 0.541);
     border: transparent;
+}
+.form_formik_register > div> input{
+    font-size: 1.3em;
 }
 .select_input{
     background-color: #fff;

@@ -7,7 +7,9 @@ import {
     FormikBasicPage,
     FormikComponentsPage,
     FormikYupPage,
-    RegisterPage 
+    RegisterPage ,
+    RegisterFormikPage,
+    DynamicForm
 } from '../03-forms/pages';
 
 
@@ -22,6 +24,8 @@ export const AppRouter = () => {
                 <Route path="formik-yup" element={<FormikYupPage />} />
                 <Route path="formik-component" element={<FormikComponentsPage />} />
                 <Route path="formik-abstractation" element={<FormikAbstractation />} />
+                <Route path="formik-register" element={<RegisterFormikPage />} />
+                <Route path="dynamic-form" element={<DynamicForm />} />
                 <Route path="*" element={ <Navigate to="/" /> } />
             </Routes>
         </div>
